@@ -15,11 +15,16 @@ publicKey=02e3af28965693b9ce1228f9d468149b831d6a0540b25e8a9900f71372c11fb277
 #relativevalue=$(printf '%x\n' $((0x$hexvalue | 0x400000)))
 #printf "%d\n" "0x$relativevalue"
 #time value is 4224679
+
 #convert publicKey to publicKeyHas
 # echo -n $publicKey | xxd -r -p | openssl dgst -sha256 -binary | openssl dgst -rmd160
 
 publicKeyHash=1e51fcdc14be9a148bb0aaec9197eb47c83776fb
 
-CSV_Script_TimeBased=$(btcc 4224679 OP_CHECKSEQUENCEVERIFY OP_DROP OP_DUP OP_HASH160 $publicKeyHash OP_EQUALVERIFY OP_CHECKSIG)
+# btcc 4224679 OP_CHECKSEQUENCEVERIFY OP_DROP OP_DUP OP_HASH160 $publicKeyHash OP_EQUALVERIFY OP_CHECKSIG
+
+#After running the script commented out above, below is the script obtained from my CLI
+
+CSV_Script_TimeBased="03a77640b27576a9141e51fcdc14be9a148bb0aaec9197eb47c83776fb88ac"
 
 echo $CSV_Script_TimeBased
