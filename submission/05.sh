@@ -13,6 +13,7 @@ publicKeyHash=1e51fcdc14be9a148bb0aaec9197eb47c83776fb
 # btcc 0x9600 OP_CHECKSEQUENCEVERIFY OP_DROP OP_DUP OP_HASH160 $publicKeyHash OP_EQUALVERIFY OP_CHECKSIG
 
 #After running the script commented out above, below is the script obtained from my CLI
-$CSV_Script="029600b27576a9141e51fcdc14be9a148bb0aaec9197eb47c83776fb88ac"
+
+CSV_Script="029600b27576a9141e51fcdc14be9a148bb0aaec9197eb47c83776fb88ac"
 
 echo $CSV_Script
